@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Naresh Kadali | GCP Architect</title>
+<title>Naresh Kadali | GCP Architect Portfolio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -14,9 +14,8 @@ body {
   height:100vh;
 }
 
-/* Sidebar */
 .sidebar {
-  width:270px;
+  width:280px;
   background:#020617;
   border-right:1px solid #1e293b;
   padding:20px;
@@ -25,12 +24,11 @@ body {
 
 .sidebar h3 {
   color:#38bdf8;
-  margin-top:20px;
 }
 
 .menu-item {
   padding:10px;
-  margin:5px 0;
+  margin:6px 0;
   background:#0f172a;
   border-radius:6px;
   cursor:pointer;
@@ -41,14 +39,12 @@ body {
   color:#020617;
 }
 
-/* Main */
 .main {
   flex:1;
   padding:20px;
   overflow-y:auto;
 }
 
-/* Header */
 .header {
   display:flex;
   gap:20px;
@@ -56,7 +52,7 @@ body {
 }
 
 .header img {
-  width:110px;
+  width:100px;
   border-radius:50%;
   border:2px solid #38bdf8;
 }
@@ -64,30 +60,30 @@ body {
 .content-box {
   margin-top:20px;
   background:#0f172a;
-  padding:20px;
+  padding:25px;
   border-radius:12px;
   border:1px solid #1e293b;
+  line-height:1.7;
 }
 
 .arch-img {
   width:100%;
-  margin-top:15px;
+  margin:20px 0;
   border-radius:10px;
 }
 
 .tag {
   background:#1e293b;
   padding:5px 10px;
-  border-radius:6px;
   margin:5px;
   display:inline-block;
+  border-radius:6px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- Sidebar -->
 <div class="sidebar">
 
 <h3>🤖 AI Systems</h3>
@@ -97,24 +93,26 @@ body {
 <div class="menu-item" onclick="loadContent('models')">Model Orchestration</div>
 <div class="menu-item" onclick="loadContent('tools')">Workflow Tools</div>
 
-<h3>☁️ GCP Architecture</h3>
-<div class="menu-item" onclick="loadContent('landing')">Landing Zone</div>
-<div class="menu-item" onclick="loadContent('migration')">Migration</div>
+<h3>☁️ GCP & Leadership</h3>
+<div class="menu-item" onclick="loadContent('landing')">GCP Landing Zone</div>
+<div class="menu-item" onclick="loadContent('migration')">ESDS → GCP Migration</div>
 <div class="menu-item" onclick="loadContent('cost')">Cost Optimization</div>
 <div class="menu-item" onclick="loadContent('iam')">IAM & Governance</div>
 <div class="menu-item" onclick="loadContent('lead')">Technical Leadership</div>
 <div class="menu-item" onclick="loadContent('aiGov')">AI Governance</div>
 
+<h3>🏆 Case Study</h3>
+<div class="menu-item" onclick="loadContent('project')">Migration Case Study</div>
+
 </div>
 
-<!-- Main -->
 <div class="main">
 
 <div class="header">
 <img src="img/profile.png">
 <div>
 <h1 style="color:#38bdf8;">Naresh Kadali</h1>
-<p>GCP Architect | AI Systems | Technical Lead</p>
+<p>GCP Architect | AI Systems | Technical Lead | SME</p>
 <p>📍 Bangalore | <a href="https://www.linkedin.com/in/nareshkadali/" target="_blank" style="color:#38bdf8;">LinkedIn</a></p>
 </div>
 </div>
@@ -129,152 +127,144 @@ function loadContent(section){
 
 let content = "";
 
-/* AI AGENTS */
+/* ================= AI AGENTS ================= */
 if(section==="agents"){
 content =
 "<h2>🤖 AI Agent Systems</h2>" +
 
-"<p>AI agent systems enable distributed problem-solving by decomposing tasks into smaller units handled by specialized agents. This pattern improves reasoning depth and automation capability compared to single LLM calls.</p>" +
+"<p>AI Agent Systems represent a modern architectural pattern where complex tasks are decomposed into multiple smaller tasks handled by independent agents. Instead of relying on a single LLM call, these systems improve reasoning, reliability, and scalability.</p>" +
 
-"<h3>📦 Tools Context</h3>" +
-"<span class='tag'>hermes-agent</span>" +
-"<span class='tag'>llm-council</span>" +
-"<span class='tag'>openclaude</span>" +
+"<p>Tools like hermes-agent, llm-council, and openclaude are not enterprise-ready platforms but represent experimental frameworks demonstrating orchestration and decision-making patterns.</p>" +
 
-"<h3>⚙️ Architecture Approach</h3>" +
-"<ul>" +
-"<li>Orchestrator manages agent lifecycle</li>" +
-"<li>Agents perform reasoning / execution</li>" +
-"<li>Decision layer validates outputs</li>" +
-"</ul>" +
+"<p>In a real-world enterprise setup, similar patterns are implemented using microservices, APIs, queues, and orchestration layers built using frameworks like FastAPI or Kubernetes.</p>" +
 
 "<img class='arch-img' src='img/ai-agent-architecture.png'>" +
 
-"<h3>💡 Architect Decisions</h3>" +
-"<ul>" +
-"<li>Centralized vs distributed orchestration</li>" +
-"<li>Sequential vs parallel agent execution</li>" +
-"</ul>" +
+"<p><b>Architect Perspective:</b> The key decision is whether to use centralized orchestration or distributed agent execution. This depends on latency, reliability, and system complexity.</p>" +
 
-"<h3>🏆 Impact</h3>" +
-"<p>Enables scalable automation and intelligent workflows.</p>";
+"<p><b>Use Case:</b> AI copilots, automation pipelines, decision systems.</p>";
 }
 
-/* GCP LANDING */
+/* ================= LANDING ================= */
 else if(section==="landing"){
 content =
 "<h2>🏗️ GCP Landing Zone</h2>" +
 
-"<p>Foundation setup for enterprise cloud ensuring governance, security, and scalability.</p>" +
+"<p>The GCP Landing Zone is the foundational layer that defines how an organization structures, secures, and governs its cloud environment. As an Architect, this is the first and most critical step before onboarding workloads.</p>" +
 
-"<h3>🎯 Responsibilities</h3>" +
-"<ul>" +
-"<li>Org & folder hierarchy design</li>" +
-"<li>IAM & security model</li>" +
-"<li>Shared VPC networking</li>" +
-"</ul>" +
+"<p>It involves creating Organization hierarchy, Folder structure, and Projects aligned with business units and environments such as Dev, QA, and Production.</p>" +
+
+"<p>Networking is designed using Shared VPC architecture, ensuring centralized control while allowing project-level resource isolation.</p>" +
+
+"<p>IAM is implemented using Role-Based Access Control (RBAC) following least privilege principles. Service accounts are used for workload identity to avoid human dependencies.</p>" +
 
 "<img class='arch-img' src='img/gcp-landing.png'>" +
 
-"<h3>💡 Key Decisions</h3>" +
-"<ul>" +
-"<li>Environment isolation (Dev/Prod)</li>" +
-"<li>Centralized security controls</li>" +
-"</ul>" +
+"<p>Organization policies enforce restrictions such as disallowing public IPs or restricting regions. Logging and monitoring are enabled centrally.</p>" +
 
-"<h3>🏆 Impact</h3>" +
-"<p>Provides scalable and secure foundation for all workloads.</p>";
+"<p><b>Key Decisions:</b> Centralized vs decentralized model, network segmentation, IAM granularity.</p>" +
+
+"<p><b>Impact:</b> Provides secure, scalable, and compliant foundation for enterprise workloads.</p>";
 }
 
-/* MIGRATION */
+/* ================= MIGRATION ================= */
 else if(section==="migration"){
 content =
 "<h2>🔄 ESDS → GCP Migration</h2>" +
 
-"<p>Executed lift-and-shift migration minimizing downtime and risk.</p>" +
+"<p>This migration involved moving workloads from ESDS to GCP using a Lift-and-Shift strategy due to strict client constraints preventing environment changes.</p>" +
 
-"<h3>⚙️ Execution</h3>" +
-"<ul>" +
-"<li>Assessment & dependency mapping</li>" +
-"<li>Replication using Sureline</li>" +
-"<li>Validation & cutover</li>" +
-"</ul>" +
+"<p>The migration was executed in phases, starting with discovery and dependency mapping. Tools like Stratozone were used for assessment, and Sureline was used for replication.</p>" +
 
 "<img class='arch-img' src='img/migration.png'>" +
 
-"<h3>🏆 Impact</h3>" +
-"<p>Seamless migration with minimal business disruption.</p>";
+"<p>The migration was divided into 3 waves: non-critical systems first, followed by medium and business-critical workloads.</p>" +
+
+"<p>Pre-migration testing included OS compatibility and failover validation to avoid post-migration issues.</p>" +
+
+"<p><b>Key Decisions:</b> Rehost vs refactor, migration wave planning, downtime strategy.</p>" +
+
+"<p><b>Impact:</b> Ensured smooth migration with minimal disruption.</p>";
 }
 
-/* COST */
+/* ================= COST ================= */
 else if(section==="cost"){
 content =
 "<h2>💰 Cost Optimization</h2>" +
 
-"<p>Implemented FinOps practices to optimize cloud cost.</p>" +
+"<p>Implemented FinOps practices to optimize GCP spending over a 2-year period.</p>" +
 
-"<ul>" +
-"<li>Rightsizing</li>" +
-"<li>CUDs</li>" +
-"<li>Autoscaling</li>" +
-"</ul>" +
+"<p>Techniques included rightsizing VMs, implementing autoscaling, and using committed use discounts.</p>" +
 
 "<img class='arch-img' src='img/cost.png'>" +
 
-"<h3>🏆 Impact</h3>" +
-"<p>Optimized cost without impacting performance.</p>";
+"<p><b>Result:</b> Achieved approximately 30% cost reduction.</p>" +
+
+"<p><b>Architect Focus:</b> Balancing cost vs performance while maintaining SLA.</p>";
 }
 
-/* IAM */
+/* ================= IAM ================= */
 else if(section==="iam"){
 content =
 "<h2>🔐 IAM & Governance</h2>" +
 
-"<ul>" +
-"<li>RBAC design</li>" +
-"<li>Policy enforcement</li>" +
-"</ul>" +
+"<p>IAM strategy ensures secure access control using RBAC and least privilege principles.</p>" +
 
 "<img class='arch-img' src='img/iam.png'>" +
 
-"<p>Ensures secure and compliant access control.</p>";
+"<p>Policies are enforced at organization and project level to ensure compliance.</p>" +
+
+"<p><b>Impact:</b> Improved security and reduced risk.</p>";
 }
 
-/* LEAD */
+/* ================= LEAD ================= */
 else if(section==="lead"){
 content =
 "<h2>👨‍💼 Technical Leadership</h2>" +
 
-"<ul>" +
-"<li>Architecture ownership</li>" +
-"<li>Team coordination</li>" +
-"<li>Stakeholder communication</li>" +
-"</ul>" +
+"<p>Led cross-functional teams including Backup, Windows, Linux, SAP, Network, Database, Monitoring, Tools, and GCP teams.</p>" +
 
 "<img class='arch-img' src='img/leadership.png'>" +
 
-"<p>Delivered projects aligned with business goals.</p>";
+"<p>Managed delivery, resolved dependencies, and ensured alignment across teams.</p>" +
+
+"<p><b>Impact:</b> Successful execution of large-scale migration project.</p>";
 }
 
-/* AI GOV */
+/* ================= AI GOV ================= */
 else if(section==="aiGov"){
 content =
 "<h2>🧠 AI Governance</h2>" +
 
-"<ul>" +
-"<li>Responsible AI policies</li>" +
-"<li>Monitoring & compliance</li>" +
-"</ul>" +
+"<p>Ensures responsible AI usage including security, compliance, and monitoring.</p>" +
 
 "<img class='arch-img' src='img/ai-governance.png'>" +
 
-"<p>Ensures ethical and secure AI usage.</p>";
+"<p><b>Impact:</b> Builds trust and ensures compliance.</p>";
+}
+
+/* ================= PROJECT ================= */
+else if(section==="project"){
+content =
+"<h2>🏆 Enterprise Migration Case Study</h2>" +
+
+"<p>Migrated 146 VMs from ESDS to GCP using Lift & Shift strategy due to strict client constraints.</p>" +
+
+"<p>Designed landing zone, VPC architecture (Prod, Non-Prod, Management), and IAM model.</p>" +
+
+"<img class='arch-img' src='img/project-architecture.png'>" +
+
+"<p>Executed migration in 3 waves with validation and testing.</p>" +
+
+"<p>Led cross-functional teams and achieved 30% cost reduction over 2 years.</p>" +
+
+"<p><b>Outcome:</b> Successful migration with scalability and governance.</p>";
 }
 
 document.getElementById("content").innerHTML = content;
 }
 
-loadContent("agents");
+loadContent("project");
 
 </script>
 
