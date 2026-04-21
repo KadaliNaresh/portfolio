@@ -138,145 +138,246 @@ function loadContent(section){
 
 let content = "";
 
-/* AI AGENTS */
+/* ================= AI AGENTS ================= */
 if(section === "agents"){
 content =
 "<h2>🤖 AI Agent Systems</h2>" +
 
-"<p>Multi-agent systems divide complex problems into smaller tasks handled by specialized agents.</p>" +
+"<p>Multi-agent systems are an emerging pattern in AI where tasks are broken into smaller steps and handled by multiple cooperating agents instead of a single LLM call.</p>" +
 
-"<h3>📦 Packages</h3>" +
-"<span class='tag'>hermes-agent</span>" +
-"<span class='tag'>llm-council</span>" +
-"<span class='tag'>openclaude</span>" +
-
-"<h3>⚙️ How It Works</h3>" +
+"<h3>📦 Packages (Contextual Use)</h3>" +
 "<ul>" +
-"<li>User request enters API</li>" +
-"<li>Orchestrator splits tasks</li>" +
-"<li>Agents process independently</li>" +
-"<li>Results are validated and merged</li>" +
+"<li><b>hermes-agent</b> → Agent orchestration (task execution flow)</li>" +
+"<li><b>llm-council</b> → Multi-model evaluation (LLMs cross-check outputs)</li>" +
+"<li><b>openclaude</b> → Interface for Claude-style reasoning models</li>" +
+"</ul>" +
+
+"<h3>⚙️ How These Actually Work</h3>" +
+"<ul>" +
+"<li>They are not standalone platforms — they act as orchestration layers</li>" +
+"<li>You define agents with roles (planner, executor, validator)</li>" +
+"<li>Tasks are passed between agents in sequence or parallel</li>" +
+"<li>Outputs are evaluated before final response</li>" +
 "</ul>" +
 
 "<img class='arch-img' src='img/ai-agent-architecture.png'>" +
 
-"<h3>🏢 Use Cases</h3>" +
+"<h3>🏢 Where Used (Realistic)</h3>" +
 "<ul>" +
-"<li>DevOps automation</li>" +
-"<li>AI copilots</li>" +
-"<li>Enterprise decision systems</li>" +
+"<li>Prototype AI copilots</li>" +
+"<li>Automation pipelines</li>" +
+"<li>Research or experimental AI systems</li>" +
+"</ul>" +
+
+"<h3>💡 Practical Enterprise Approach</h3>" +
+"<p>In production, similar patterns are implemented using custom services (FastAPI, microservices, queues) rather than directly using these repos.</p>";
+}
+
+/* ================= VOICE ================= */
+else if(section === "voice"){
+content =
+"<h2>🎙️ Voice AI Systems</h2>" +
+
+"<p>Voice AI systems convert speech into text, process it with an LLM, and return a spoken response.</p>" +
+
+"<h3>📦 Package</h3>" +
+"<ul><li><b>VibeVoice</b> → Integrates speech input/output with LLM workflows</li></ul>" +
+
+"<h3>⚙️ How It Works</h3>" +
+"<ul>" +
+"<li>Audio input captured from user</li>" +
+"<li>Speech-to-Text converts audio → text</li>" +
+"<li>LLM processes the request</li>" +
+"<li>Text-to-Speech converts response → audio</li>" +
+"</ul>" +
+
+"<img class='arch-img' src='img/voice-architecture.png'>" +
+
+"<h3>🏢 Real Usage</h3>" +
+"<ul>" +
+"<li>Customer support bots</li>" +
+"<li>Voice assistants</li>" +
+"<li>Call automation systems</li>" +
+"</ul>" +
+
+"<p><b>Note:</b> Production systems typically use managed services like GCP Speech APIs.</p>";
+}
+
+/* ================= CODING ================= */
+else if(section === "coding"){
+content =
+"<h2>⚙️ AI Coding Systems</h2>" +
+
+"<p>These tools focus on generating, modifying, or validating code using LLMs.</p>" +
+
+"<h3>📦 Packages</h3>" +
+"<ul>" +
+"<li><b>claw-code</b> → Code generation workflows</li>" +
+"<li><b>NemoClaw</b> → Structured reasoning for code tasks</li>" +
+"</ul>" +
+
+"<h3>⚙️ How It Works</h3>" +
+"<ul>" +
+"<li>User prompt → structured input</li>" +
+"<li>LLM generates code</li>" +
+"<li>Optional validation (syntax / logic)</li>" +
+"</ul>" +
+
+"<img class='arch-img' src='img/coding-architecture.png'>" +
+
+"<h3>🏢 Where Used</h3>" +
+"<ul>" +
+"<li>Developer productivity tools</li>" +
+"<li>Automation scripts</li>" +
+"<li>Internal engineering tools</li>" +
+"</ul>" +
+
+"<p><b>Reality:</b> These are experimental; production tools use controlled pipelines.</p>";
+}
+
+/* ================= MODELS ================= */
+else if(section === "models"){
+content =
+"<h2>🧪 Model Orchestration</h2>" +
+
+"<p>These tools represent the concept of routing between multiple AI models based on task requirements.</p>" +
+
+"<h3>📦 Packages</h3>" +
+"<ul>" +
+"<li><b>void-model</b> → Model abstraction layer</li>" +
+"<li><b>Antigravity</b> → Experimental model interaction framework</li>" +
+"</ul>" +
+
+"<h3>⚙️ How It Works</h3>" +
+"<ul>" +
+"<li>Request enters system</li>" +
+"<li>Router selects appropriate model</li>" +
+"<li>Response evaluated or fallback triggered</li>" +
+"</ul>" +
+
+"<img class='arch-img' src='img/model-architecture.png'>" +
+
+"<h3>🏢 Real Use</h3>" +
+"<ul>" +
+"<li>Cost optimization (choose cheaper model)</li>" +
+"<li>Fallback mechanisms</li>" +
+"<li>Multi-provider AI platforms</li>" +
 "</ul>";
 }
 
-/* VOICE */
-else if(section === "voice"){
-content =
-"<h2>🎙️ Voice AI</h2>" +
-"<p>Speech-based AI interaction pipeline.</p>" +
-
-"<h3>📦 Package</h3>" +
-"<span class='tag'>VibeVoice</span>" +
-
-"<h3>⚙️ Flow</h3>" +
-"<ul>" +
-"<li>Speech → Text</li>" +
-"<li>LLM Processing</li>" +
-"<li>Text → Speech</li>" +
-"</ul>" +
-
-"<img class='arch-img' src='img/voice-architecture.png'>";
-}
-
-/* CODING */
-else if(section === "coding"){
-content =
-"<h2>⚙️ Coding AI</h2>" +
-"<span class='tag'>claw-code</span>" +
-"<span class='tag'>NemoClaw</span>" +
-
-"<p>AI-assisted code generation and validation.</p>" +
-
-"<img class='arch-img' src='img/coding-architecture.png'>";
-}
-
-/* MODELS */
-else if(section === "models"){
-content =
-"<h2>🧪 Model Systems</h2>" +
-"<span class='tag'>void-model</span>" +
-"<span class='tag'>Antigravity</span>" +
-
-"<p>Routes requests across multiple models based on task.</p>" +
-
-"<img class='arch-img' src='img/model-architecture.png'>";
-}
-
-/* WORKFLOW */
+/* ================= WORKFLOW ================= */
 else if(section === "tools"){
 content =
-"<h2>📊 Workflow Tools</h2>" +
-"<span class='tag'>career-ops</span>" +
-"<span class='tag'>MiroFish</span>" +
-"<span class='tag'>ruflo</span>" +
+"<h2>📊 Workflow & Automation Tools</h2>" +
 
-"<p>Automation and workflow orchestration tools.</p>" +
+"<p>These repositories are typically used for building automation workflows or UI-driven tools.</p>" +
 
-"<img class='arch-img' src='img/workflow-architecture.png'>";
+"<h3>📦 Packages</h3>" +
+"<ul>" +
+"<li><b>career-ops</b> → Job automation workflows</li>" +
+"<li><b>MiroFish</b> → UI / workflow visualization</li>" +
+"<li><b>ruflo</b> → Utility / experimental tool</li>" +
+"</ul>" +
+
+"<img class='arch-img' src='img/workflow-architecture.png'>" +
+
+"<h3>🏢 Usage</h3>" +
+"<ul>" +
+"<li>Automation dashboards</li>" +
+"<li>Workflow orchestration</li>" +
+"<li>Prototype applications</li>" +
+"</ul>" +
+
+"<p><b>Note:</b> These are supporting tools, not enterprise platforms.</p>";
 }
 
-/* GCP */
+/* ================= GCP ================= */
 else if(section === "landing"){
 content =
 "<h2>🏗️ GCP Landing Zone</h2>" +
-"<p>Organization setup, IAM, and governance.</p>" +
 
-"<img class='arch-img' src='img/gcp-landing.png'>";
+"<p>Defines the foundational cloud structure for enterprise environments.</p>" +
+
+"<img class='arch-img' src='img/gcp-landing.png'>" +
+
+"<ul>" +
+"<li>Organization hierarchy</li>" +
+"<li>IAM roles & policies</li>" +
+"<li>Networking setup</li>" +
+"</ul>";
 }
 
 else if(section === "migration"){
 content =
 "<h2>🔄 ESDS → GCP Migration</h2>" +
-"<p>Lift & Shift migration using Sureline.</p>" +
 
-"<img class='arch-img' src='img/migration.png'>";
+"<p>Lift-and-shift migration using tools like Sureline.</p>" +
+
+"<img class='arch-img' src='img/migration.png'>" +
+
+"<ul>" +
+"<li>Assessment</li>" +
+"<li>Replication</li>" +
+"<li>Validation</li>" +
+"</ul>";
 }
 
 else if(section === "cost"){
 content =
 "<h2>💰 Cost Optimization</h2>" +
-"<p>FinOps, rightsizing, and monitoring.</p>" +
 
-"<img class='arch-img' src='img/cost.png'>";
+"<img class='arch-img' src='img/cost.png'>" +
+
+"<ul>" +
+"<li>Rightsizing</li>" +
+"<li>Committed use discounts</li>" +
+"<li>Monitoring usage</li>" +
+"</ul>";
 }
 
 else if(section === "iam"){
 content =
 "<h2>🔐 IAM & Governance</h2>" +
-"<p>Access control and security policies.</p>" +
 
-"<img class='arch-img' src='img/iam.png'>";
+"<img class='arch-img' src='img/iam.png'>" +
+
+"<ul>" +
+"<li>Role-based access control</li>" +
+"<li>Policies & constraints</li>" +
+"<li>Security enforcement</li>" +
+"</ul>";
 }
 
 else if(section === "lead"){
 content =
 "<h2>👨‍💼 Technical Leadership</h2>" +
-"<p>Project delivery, SME role, and stakeholder management.</p>" +
 
-"<img class='arch-img' src='img/leadership.png'>";
+"<img class='arch-img' src='img/leadership.png'>" +
+
+"<ul>" +
+"<li>Project delivery ownership</li>" +
+"<li>Cross-team coordination</li>" +
+"<li>Stakeholder management</li>" +
+"</ul>";
 }
 
 else if(section === "aiGov"){
 content =
 "<h2>🧠 AI Governance</h2>" +
-"<p>Responsible AI, compliance, and monitoring.</p>" +
 
-"<img class='arch-img' src='img/ai-governance.png'>";
+"<img class='arch-img' src='img/ai-governance.png'>" +
+
+"<ul>" +
+"<li>Responsible AI practices</li>" +
+"<li>Audit & compliance</li>" +
+"<li>Model monitoring</li>" +
+"</ul>";
 }
 
 document.getElementById("content").innerHTML = content;
 }
 
-/* DEFAULT LOAD */
+/* default */
 loadContent("agents");
 
 </script>
