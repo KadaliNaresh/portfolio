@@ -26,26 +26,24 @@
 
     p {opacity:0.8;}
 
-    /* GRID */
     .grid {
       display:grid;
-      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
       gap:20px;
       padding:40px;
     }
 
-    /* CARD */
     .card {
       background:#0f172a;
       padding:20px;
       border-radius:12px;
       border:1px solid #1e293b;
       transition:0.4s;
-      box-shadow:0 0 10px rgba(0,0,0,0.5);
+      cursor:pointer;
     }
 
     .card:hover {
-      transform:translateY(-8px) scale(1.05);
+      transform:translateY(-8px) scale(1.03);
       border-color:#38bdf8;
       box-shadow:0 0 25px #38bdf8;
     }
@@ -61,37 +59,32 @@
       font-weight:bold;
     }
 
-    /* FLOW */
-    .flow {
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      gap:15px;
-      padding:40px;
+    /* EXPAND SECTION */
+    .expand {
+      max-height:0;
+      overflow:hidden;
+      transition:max-height 0.5s ease;
+      margin-top:10px;
     }
 
-    .flow-box {
-      background:#0f172a;
-      padding:15px 25px;
+    .expand.open {
+      max-height:800px;
+    }
+
+    .arch-img {
+      width:100%;
       border-radius:10px;
+      margin-top:10px;
       border:1px solid #1e293b;
-      animation:glow 3s infinite alternate;
     }
 
-    @keyframes glow {
-      from { box-shadow:0 0 5px #38bdf8; }
-      to { box-shadow:0 0 20px #38bdf8; }
-    }
-
-    .arrow {
-      font-size:24px;
-      color:#38bdf8;
-      animation:move 1s infinite alternate;
-    }
-
-    @keyframes move {
-      from { transform:translateY(0px); }
-      to { transform:translateY(8px); }
+    .tag {
+      display:inline-block;
+      background:#1e293b;
+      padding:5px 10px;
+      border-radius:6px;
+      margin:5px 5px 0 0;
+      font-size:12px;
     }
 
   </style>
@@ -104,64 +97,116 @@
   <p>Cloud Architect | AI Systems | Delivery Leadership</p>
 </header>
 
-<!-- PROJECT GRID -->
 <section class="grid">
 
-<div class="card">
-<h3>☁️ Cloud Architecture</h3>
-<p>GCP governance, IAM, FinOps, CI/CD pipelines</p>
-<a class="btn" href="https://github.com/KadaliNaresh/GCP_ORG_Policy">View</a>
+<!-- AI AGENT PLATFORM -->
+<div class="card" onclick="toggle('aiAgent')">
+  <h3>🤖 AI Agent Platform</h3>
+  <p>Multi-agent orchestration with LLM systems</p>
+
+  <div id="aiAgent" class="expand">
+    <p>Enterprise AI system where multiple agents collaborate for decision making.</p>
+
+    <b>Tools Used:</b><br>
+    <span class="tag">hermes-agent</span>
+    <span class="tag">llm-council</span>
+    <span class="tag">openclaude</span>
+
+    <img class="arch-img" src="https://i.imgur.com/8YqQZ8K.png">
+
+    <p><b>Architecture:</b> API Gateway → Orchestrator → Multi-Agent → Memory → LLM APIs</p>
+
+    <a class="btn" href="#">View Repo</a>
+  </div>
 </div>
 
-<div class="card">
-<h3>🤖 AI Agent Platform</h3>
-<p>Multi-agent orchestration with LLM systems</p>
-<a class="btn" href="#">Coming Soon</a>
+<!-- VOICE AI -->
+<div class="card" onclick="toggle('voiceAI')">
+  <h3>🎙️ Voice AI Platform</h3>
+  <p>Real-time speech-based AI assistant</p>
+
+  <div id="voiceAI" class="expand">
+    <p>Streaming voice assistant with real-time transcription and response.</p>
+
+    <b>Tools Used:</b><br>
+    <span class="tag">VibeVoice</span>
+
+    <img class="arch-img" src="https://i.imgur.com/3ZQ3Z6R.png">
+
+    <p><b>Architecture:</b> Mic → STT → LLM → TTS → Audio Output</p>
+
+    <a class="btn" href="#">View Repo</a>
+  </div>
 </div>
 
-<div class="card">
-<h3>⚙️ DevOps Automation</h3>
-<p>Cloud Build, Cloud Run, Infrastructure automation</p>
-<a class="btn" href="https://github.com/KadaliNaresh/cicdWithGCPcloudBuildCloudRun">View</a>
+<!-- AI CODING -->
+<div class="card" onclick="toggle('codingAI')">
+  <h3>⚙️ AI Coding Assistant</h3>
+  <p>Code generation and validation system</p>
+
+  <div id="codingAI" class="expand">
+    <p>AI-powered coding assistant with validation and security checks.</p>
+
+    <b>Tools Used:</b><br>
+    <span class="tag">claw-code</span>
+    <span class="tag">NemoClaw</span>
+
+    <img class="arch-img" src="https://i.imgur.com/W3XlqGk.png">
+
+    <p><b>Architecture:</b> User → Prompt Builder → Code LLM → Analyzer → Output</p>
+
+    <a class="btn" href="#">View Repo</a>
+  </div>
 </div>
 
-<div class="card">
-<h3>📊 Data & AI</h3>
-<p>NLP, dashboards, ML systems</p>
-<a class="btn" href="https://github.com/KadaliNaresh/NLP_With_Python">View</a>
+<!-- MODEL PLATFORM -->
+<div class="card" onclick="toggle('modelAI')">
+  <h3>🧪 Model Platform</h3>
+  <p>Multi-model orchestration and evaluation</p>
+
+  <div id="modelAI" class="expand">
+    <p>Platform to test and route across multiple AI models.</p>
+
+    <b>Tools Used:</b><br>
+    <span class="tag">void-model</span>
+    <span class="tag">Antigravity</span>
+
+    <img class="arch-img" src="https://i.imgur.com/cs9QX6Z.png">
+
+    <p><b>Architecture:</b> API → Model Router → Multiple Models → Evaluation</p>
+
+    <a class="btn" href="#">View Repo</a>
+  </div>
+</div>
+
+<!-- CAREER OPS -->
+<div class="card" onclick="toggle('careerAI')">
+  <h3>📊 Career Automation</h3>
+  <p>AI-driven job automation system</p>
+
+  <div id="careerAI" class="expand">
+    <p>Automates job search, resume optimization, and applications.</p>
+
+    <b>Tools Used:</b><br>
+    <span class="tag">career-ops</span>
+    <span class="tag">MiroFish</span>
+
+    <img class="arch-img" src="https://i.imgur.com/jR8l6mF.png">
+
+    <p><b>Architecture:</b> Job Fetch → Resume AI → Apply Engine → Notifications</p>
+
+    <a class="btn" href="#">View Repo</a>
+  </div>
 </div>
 
 </section>
 
-<!-- FLOW SECTION -->
-<section class="flow">
-
-<h2>🧠 System Architecture Flow</h2>
-
-<div class="flow-box">☁️ Cloud & DevOps Foundation</div>
-<div class="arrow">⬇</div>
-
-<div class="flow-box">🤖 AI Agent Platform</div>
-<div class="arrow">⬇</div>
-
-<div class="flow-box">🧠 Decision Engine (LLM Council)</div>
-<div class="arrow">⬇</div>
-
-<div class="flow-box">⚙️ Execution Layer (NemoClaw)</div>
-<div class="arrow">⬇</div>
-
-<div class="flow-box">🔬 AI Models (Void / Antigravity)</div>
-<div class="arrow">⬇</div>
-
-<div class="flow-box">🔄 Automation Systems</div>
-<div class="arrow">⬇</div>
-
-<div class="flow-box">📊 Business Output</div>
-<div class="arrow">⬇</div>
-
-<div class="flow-box">🚀 Innovation Layer</div>
-
-</section>
+<script>
+function toggle(id) {
+  const el = document.getElementById(id);
+  el.classList.toggle("open");
+}
+</script>
 
 </body>
 </html>
