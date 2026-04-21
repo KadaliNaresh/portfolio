@@ -1,210 +1,237 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Naresh Kadali | AI & Cloud Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naresh Kadali | AI & Cloud Architect</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin:0;
-      font-family: 'Segoe UI';
-      background:#020617;
-      color:#e2e8f0;
-    }
+<style>
+body {
+  margin:0;
+  font-family:'Segoe UI';
+  background:#020617;
+  color:#e2e8f0;
+}
 
-    header {
-      text-align:center;
-      padding:60px;
-      background: linear-gradient(90deg,#020617,#0f172a);
-    }
+header {
+  text-align:center;
+  padding:60px;
+  background:linear-gradient(90deg,#020617,#0f172a);
+}
 
-    h1 {
-      font-size:42px;
-      color:#38bdf8;
-      text-shadow:0 0 20px #38bdf8;
-    }
+h1 {
+  font-size:42px;
+  color:#38bdf8;
+  text-shadow:0 0 20px #38bdf8;
+}
 
-    p {opacity:0.8;}
+.grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  gap:20px;
+  padding:40px;
+}
 
-    .grid {
-      display:grid;
-      grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-      gap:20px;
-      padding:40px;
-    }
+.card {
+  background:#0f172a;
+  padding:20px;
+  border-radius:12px;
+  border:1px solid #1e293b;
+  cursor:pointer;
+  transition:0.3s;
+}
 
-    .card {
-      background:#0f172a;
-      padding:20px;
-      border-radius:12px;
-      border:1px solid #1e293b;
-      transition:0.4s;
-      cursor:pointer;
-    }
+.card:hover {
+  transform:scale(1.03);
+  border-color:#38bdf8;
+  box-shadow:0 0 20px #38bdf8;
+}
 
-    .card:hover {
-      transform:translateY(-8px) scale(1.03);
-      border-color:#38bdf8;
-      box-shadow:0 0 25px #38bdf8;
-    }
+.expand {
+  max-height:0;
+  overflow:hidden;
+  transition:max-height 0.5s ease;
+}
 
-    .btn {
-      display:inline-block;
-      margin-top:10px;
-      padding:8px 12px;
-      background:#38bdf8;
-      color:#020617;
-      text-decoration:none;
-      border-radius:6px;
-      font-weight:bold;
-    }
+.expand.open {
+  max-height:1000px;
+}
 
-    /* EXPAND SECTION */
-    .expand {
-      max-height:0;
-      overflow:hidden;
-      transition:max-height 0.5s ease;
-      margin-top:10px;
-    }
+.tag {
+  background:#1e293b;
+  padding:5px 10px;
+  border-radius:6px;
+  margin:5px;
+  display:inline-block;
+  font-size:12px;
+}
 
-    .expand.open {
-      max-height:800px;
-    }
+.btn {
+  display:inline-block;
+  margin-top:10px;
+  padding:8px 12px;
+  background:#38bdf8;
+  color:#020617;
+  text-decoration:none;
+  border-radius:6px;
+}
 
-    .arch-img {
-      width:100%;
-      border-radius:10px;
-      margin-top:10px;
-      border:1px solid #1e293b;
-    }
+.section-title {
+  text-align:center;
+  font-size:28px;
+  margin-top:40px;
+  color:#38bdf8;
+}
 
-    .tag {
-      display:inline-block;
-      background:#1e293b;
-      padding:5px 10px;
-      border-radius:6px;
-      margin:5px 5px 0 0;
-      font-size:12px;
-    }
+.profile {
+  text-align:center;
+  margin-top:20px;
+}
 
-  </style>
+</style>
 </head>
 
 <body>
 
 <header>
   <h1>⚡ Naresh Kadali</h1>
-  <p>Cloud Architect | AI Systems | Delivery Leadership</p>
+  <p>GCP Architect | AI Systems | Technical Lead | SME</p>
+
+  <div class="profile">
+    📍 Bangalore, India <br>
+    🔗 <a style="color:#38bdf8" href="https://www.linkedin.com/in/nareshkadali/" target="_blank">LinkedIn Profile</a>
+  </div>
 </header>
+
+<h2 class="section-title">🤖 AI & Automation Platforms</h2>
 
 <section class="grid">
 
-<!-- AI AGENT PLATFORM -->
-<div class="card" onclick="toggle('aiAgent')">
-  <h3>🤖 AI Agent Platform</h3>
-  <p>Multi-agent orchestration with LLM systems</p>
+<!-- AI AGENTS -->
+<div class="card" onclick="toggle('agents')">
+<h3>🤖 AI Agent Systems</h3>
+<p>Multi-agent orchestration & decision engines</p>
 
-  <div id="aiAgent" class="expand">
-    <p>Enterprise AI system where multiple agents collaborate for decision making.</p>
+<div id="agents" class="expand">
+<b>Packages:</b><br>
+<span class="tag">hermes-agent</span>
+<span class="tag">llm-council</span>
+<span class="tag">openclaude</span>
 
-    <b>Tools Used:</b><br>
-    <span class="tag">hermes-agent</span>
-    <span class="tag">llm-council</span>
-    <span class="tag">openclaude</span>
-
-    <img class="arch-img" src="https://i.imgur.com/8YqQZ8K.png">
-
-    <p><b>Architecture:</b> API Gateway → Orchestrator → Multi-Agent → Memory → LLM APIs</p>
-
-    <a class="btn" href="#">View Repo</a>
-  </div>
+<p>✔ Highly useful for AI Architect roles</p>
+<p>Architecture: Multi-Agent → Memory → LLM APIs</p>
+</div>
 </div>
 
-<!-- VOICE AI -->
-<div class="card" onclick="toggle('voiceAI')">
-  <h3>🎙️ Voice AI Platform</h3>
-  <p>Real-time speech-based AI assistant</p>
+<!-- VOICE -->
+<div class="card" onclick="toggle('voice')">
+<h3>🎙️ Voice AI</h3>
+<p>Speech-based AI systems</p>
 
-  <div id="voiceAI" class="expand">
-    <p>Streaming voice assistant with real-time transcription and response.</p>
-
-    <b>Tools Used:</b><br>
-    <span class="tag">VibeVoice</span>
-
-    <img class="arch-img" src="https://i.imgur.com/3ZQ3Z6R.png">
-
-    <p><b>Architecture:</b> Mic → STT → LLM → TTS → Audio Output</p>
-
-    <a class="btn" href="#">View Repo</a>
-  </div>
+<div id="voice" class="expand">
+<span class="tag">VibeVoice</span>
+<p>✔ High demand (AI assistants)</p>
+<p>Flow: STT → LLM → TTS</p>
+</div>
 </div>
 
-<!-- AI CODING -->
-<div class="card" onclick="toggle('codingAI')">
-  <h3>⚙️ AI Coding Assistant</h3>
-  <p>Code generation and validation system</p>
+<!-- CODING -->
+<div class="card" onclick="toggle('coding')">
+<h3>⚙️ Coding AI</h3>
+<p>Code generation & automation</p>
 
-  <div id="codingAI" class="expand">
-    <p>AI-powered coding assistant with validation and security checks.</p>
-
-    <b>Tools Used:</b><br>
-    <span class="tag">claw-code</span>
-    <span class="tag">NemoClaw</span>
-
-    <img class="arch-img" src="https://i.imgur.com/W3XlqGk.png">
-
-    <p><b>Architecture:</b> User → Prompt Builder → Code LLM → Analyzer → Output</p>
-
-    <a class="btn" href="#">View Repo</a>
-  </div>
+<div id="coding" class="expand">
+<span class="tag">claw-code</span>
+<span class="tag">NemoClaw</span>
+<p>✔ Useful for DevOps & productivity tools</p>
+</div>
 </div>
 
-<!-- MODEL PLATFORM -->
-<div class="card" onclick="toggle('modelAI')">
-  <h3>🧪 Model Platform</h3>
-  <p>Multi-model orchestration and evaluation</p>
+<!-- MODELS -->
+<div class="card" onclick="toggle('models')">
+<h3>🧪 Model Systems</h3>
+<p>Multi-model orchestration</p>
 
-  <div id="modelAI" class="expand">
-    <p>Platform to test and route across multiple AI models.</p>
-
-    <b>Tools Used:</b><br>
-    <span class="tag">void-model</span>
-    <span class="tag">Antigravity</span>
-
-    <img class="arch-img" src="https://i.imgur.com/cs9QX6Z.png">
-
-    <p><b>Architecture:</b> API → Model Router → Multiple Models → Evaluation</p>
-
-    <a class="btn" href="#">View Repo</a>
-  </div>
+<div id="models" class="expand">
+<span class="tag">void-model</span>
+<span class="tag">Antigravity</span>
+<p>✔ Shows architect-level thinking</p>
+</div>
 </div>
 
-<!-- CAREER OPS -->
-<div class="card" onclick="toggle('careerAI')">
-  <h3>📊 Career Automation</h3>
-  <p>AI-driven job automation system</p>
+<!-- OTHER -->
+<div class="card" onclick="toggle('others')">
+<h3>📊 Workflow & Tools</h3>
+<p>Supporting AI utilities</p>
 
-  <div id="careerAI" class="expand">
-    <p>Automates job search, resume optimization, and applications.</p>
+<div id="others" class="expand">
+<span class="tag">career-ops</span>
+<span class="tag">MiroFish</span>
+<span class="tag">ruflo</span>
+<p>✔ Good for demo applications</p>
+</div>
+</div>
 
-    <b>Tools Used:</b><br>
-    <span class="tag">career-ops</span>
-    <span class="tag">MiroFish</span>
+</section>
 
-    <img class="arch-img" src="https://i.imgur.com/jR8l6mF.png">
+<h2 class="section-title">☁️ GCP Architecture & Leadership</h2>
 
-    <p><b>Architecture:</b> Job Fetch → Resume AI → Apply Engine → Notifications</p>
+<section class="grid">
 
-    <a class="btn" href="#">View Repo</a>
-  </div>
+<div class="card" onclick="toggle('gcp')">
+<h3>🏗️ GCP Landing Zone</h3>
+<div id="gcp" class="expand">
+<p>Org setup, folder structure, IAM, policies</p>
+<p>✔ Core skill for Architect roles</p>
+</div>
+</div>
+
+<div class="card" onclick="toggle('migration')">
+<h3>🔄 ESDS → GCP Migration</h3>
+<div id="migration" class="expand">
+<p>Lift & Shift using Sureline</p>
+<p>Assessment → Migration → Validation</p>
+<p>✔ Enterprise project experience</p>
+</div>
+</div>
+
+<div class="card" onclick="toggle('cost')">
+<h3>💰 Cost Optimization</h3>
+<div id="cost" class="expand">
+<p>FinOps, rightsizing, committed use discounts</p>
+<p>✔ High demand skill</p>
+</div>
+</div>
+
+<div class="card" onclick="toggle('iam')">
+<h3>🔐 IAM & Governance</h3>
+<div id="iam" class="expand">
+<p>RBAC, policies, org constraints</p>
+<p>✔ Critical for enterprise security</p>
+</div>
+</div>
+
+<div class="card" onclick="toggle('lead')">
+<h3>👨‍💼 Technical Leadership</h3>
+<div id="lead" class="expand">
+<p>Project Lead, SME, cross-team handling</p>
+<p>Delivery ownership & stakeholder management</p>
+<p>✔ Key for senior roles</p>
+</div>
+</div>
+
+<div class="card" onclick="toggle('aiGov')">
+<h3>🧠 AI Governance</h3>
+<div id="aiGov" class="expand">
+<p>Responsible AI, audit, compliance</p>
+<p>✔ Emerging enterprise requirement</p>
+</div>
 </div>
 
 </section>
 
 <script>
-function toggle(id) {
-  const el = document.getElementById(id);
-  el.classList.toggle("open");
+function toggle(id){
+  document.getElementById(id).classList.toggle("open");
 }
 </script>
 
