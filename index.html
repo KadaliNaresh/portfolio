@@ -1,53 +1,99 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Naresh Kadali | Portfolio</title>
+  <title>Naresh Kadali | AI & Cloud Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
       margin:0;
       font-family: 'Segoe UI';
-      background:#0f172a;
+      background:#020617;
       color:#e2e8f0;
     }
 
     header {
       text-align:center;
-      padding:50px;
-      background: linear-gradient(90deg,#1e293b,#0f172a);
+      padding:60px;
+      background: linear-gradient(90deg,#020617,#0f172a);
     }
 
-    h1 {font-size:42px;margin:0;}
+    h1 {
+      font-size:42px;
+      color:#38bdf8;
+      text-shadow:0 0 20px #38bdf8;
+    }
+
     p {opacity:0.8;}
 
+    /* GRID */
     .grid {
       display:grid;
-      grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
       gap:20px;
       padding:40px;
     }
 
+    /* CARD */
     .card {
-      background:#1e293b;
+      background:#0f172a;
       padding:20px;
       border-radius:12px;
-      transition:0.3s;
+      border:1px solid #1e293b;
+      transition:0.4s;
+      box-shadow:0 0 10px rgba(0,0,0,0.5);
     }
 
     .card:hover {
-      transform:scale(1.05);
+      transform:translateY(-8px) scale(1.05);
+      border-color:#38bdf8;
+      box-shadow:0 0 25px #38bdf8;
     }
 
     .btn {
       display:inline-block;
       margin-top:10px;
       padding:8px 12px;
-      background:#3b82f6;
-      color:white;
+      background:#38bdf8;
+      color:#020617;
       text-decoration:none;
       border-radius:6px;
+      font-weight:bold;
     }
+
+    /* FLOW */
+    .flow {
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:15px;
+      padding:40px;
+    }
+
+    .flow-box {
+      background:#0f172a;
+      padding:15px 25px;
+      border-radius:10px;
+      border:1px solid #1e293b;
+      animation:glow 3s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { box-shadow:0 0 5px #38bdf8; }
+      to { box-shadow:0 0 20px #38bdf8; }
+    }
+
+    .arrow {
+      font-size:24px;
+      color:#38bdf8;
+      animation:move 1s infinite alternate;
+    }
+
+    @keyframes move {
+      from { transform:translateY(0px); }
+      to { transform:translateY(8px); }
+    }
+
   </style>
 </head>
 
@@ -58,31 +104,62 @@
   <p>Cloud Architect | AI Systems | Delivery Leadership</p>
 </header>
 
+<!-- PROJECT GRID -->
 <section class="grid">
 
 <div class="card">
-<h3>☁️ GCP Architecture</h3>
-<p>Enterprise cloud design, IAM, governance, FinOps (~30% optimization)</p>
+<h3>☁️ Cloud Architecture</h3>
+<p>GCP governance, IAM, FinOps, CI/CD pipelines</p>
 <a class="btn" href="https://github.com/KadaliNaresh/GCP_ORG_Policy">View</a>
 </div>
 
 <div class="card">
-<h3>⚙️ DevOps Automation</h3>
-<p>CI/CD pipelines using Cloud Build & Cloud Run</p>
-<a class="btn" href="https://github.com/KadaliNaresh/cicdWithGCPcloudBuildCloudRun">View</a>
-</div>
-
-<div class="card">
 <h3>🤖 AI Agent Platform</h3>
-<p>Multi-agent LLM orchestration (uploading soon)</p>
+<p>Multi-agent orchestration with LLM systems</p>
 <a class="btn" href="#">Coming Soon</a>
 </div>
 
 <div class="card">
+<h3>⚙️ DevOps Automation</h3>
+<p>Cloud Build, Cloud Run, Infrastructure automation</p>
+<a class="btn" href="https://github.com/KadaliNaresh/cicdWithGCPcloudBuildCloudRun">View</a>
+</div>
+
+<div class="card">
 <h3>📊 Data & AI</h3>
-<p>NLP, dashboards, and analytics systems</p>
+<p>NLP, dashboards, ML systems</p>
 <a class="btn" href="https://github.com/KadaliNaresh/NLP_With_Python">View</a>
 </div>
+
+</section>
+
+<!-- FLOW SECTION -->
+<section class="flow">
+
+<h2>🧠 System Architecture Flow</h2>
+
+<div class="flow-box">☁️ Cloud & DevOps Foundation</div>
+<div class="arrow">⬇</div>
+
+<div class="flow-box">🤖 AI Agent Platform</div>
+<div class="arrow">⬇</div>
+
+<div class="flow-box">🧠 Decision Engine (LLM Council)</div>
+<div class="arrow">⬇</div>
+
+<div class="flow-box">⚙️ Execution Layer (NemoClaw)</div>
+<div class="arrow">⬇</div>
+
+<div class="flow-box">🔬 AI Models (Void / Antigravity)</div>
+<div class="arrow">⬇</div>
+
+<div class="flow-box">🔄 Automation Systems</div>
+<div class="arrow">⬇</div>
+
+<div class="flow-box">📊 Business Output</div>
+<div class="arrow">⬇</div>
+
+<div class="flow-box">🚀 Innovation Layer</div>
 
 </section>
 
