@@ -1,32 +1,112 @@
-# ⚡ Naresh Kadali – Portfolio
+# ⚡ Naresh Kadali – Cloud & AI Portfolio
 
-🚀 This repository hosts my **GitHub Portfolio Website**
+🚀 Welcome to my **Enterprise Cloud & AI Portfolio**
 
 ---
 
-## 🌐 Live Portfolio
+## 🌐 Live Portfolio (Futuristic UI)
 
 👉 https://kadalinaresh.github.io/portfolio
 
----
-
-## 🎯 What This Shows
-
-* Cloud Architecture (GCP / Multi-Cloud)
-* AI Systems & Agent Platforms
-* DevOps & Automation
-* Data & Analytics Solutions
+> 💡 For full experience (animations, system flow, UI), open the link above.
 
 ---
 
-## 🔐 Note
+## 🧠 System Architecture Overview
 
-Source code is restricted due to enterprise security policies.
-Focus is on architecture, design, and system impact.
+```
+Cloud Foundation (GCP / DevOps)
+        ↓
+AI Agent Platform (Hermes / OpenClaude)
+        ↓
+Decision Engine (LLM Council)
+        ↓
+Execution Layer (NemoClaw / Claw Code)
+        ↓
+AI Models (Void / Antigravity)
+        ↓
+Automation Systems (Career Ops / Ruflo)
+        ↓
+Business Output Systems
+        ↓
+Innovation Layer (VibeVoice / MiroFish)
+```
+
+---
+
+## 📂 Platform Categories
+
+### ☁️ Cloud Architecture
+
+* GCP_ORG_Policy
+* CI/CD & Cloud Run
+* VM Migration
+
+---
+
+### 🤖 AI Agent Platform
+
+* Hermes Agent
+* OpenClaude
+* LLM Council
+* NemoClaw
+* Claw Code
+
+---
+
+### 🔬 AI Models
+
+* Void Model
+* Antigravity
+
+---
+
+### ⚙️ Automation Systems
+
+* Career Ops
+* Ruflo
+
+---
+
+### 📊 Data & AI Systems
+
+* NLP_With_Python
+* Self_Driving_Car
+* Dashboards
+
+---
+
+### 🚀 Innovation Labs
+
+* VibeVoice
+* MiroFish
+
+---
+
+## 🎯 Key Highlights
+
+✔️ 10+ years cloud architecture experience
+✔️ Enterprise-scale GCP solutions
+✔️ ~30% cost optimization (FinOps)
+✔️ AI-driven automation systems
+
+---
+
+## 🔐 Code Access Policy
+
+Due to enterprise and security constraints:
+
+* ✅ Architecture & design available
+* ✅ System workflows documented
+* ❌ Source code restricted
 
 ---
 
 ## 📬 Contact
 
-Email: [nareshkadali2k25@gmail.com](mailto:nareshkadali2k25@gmail.com)
-GitHub: https://github.com/KadaliNaresh
+* Email: [nareshkadali2k25@gmail.com](mailto:nareshkadali2k25@gmail.com)
+* GitHub: https://github.com/KadaliNaresh
+
+---
+
+⭐ Explore the **live portfolio** for complete system visualization.
